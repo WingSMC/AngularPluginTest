@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div#app {
+	@apply bg-gray-100;
+	@apply h-screen;
+	@apply w-screen;
+}
+
+main {
+	@apply p-4;
+	@apply flex;
+	@apply flex-col;
+	@apply items-center;
+}
+
+h1 {
+	@apply text-4xl;
+	@apply font-bold;
+	@apply text-gray-700;
+}
+
+h2 {
+	@apply text-2xl;
+	@apply font-bold;
+	@apply text-gray-700;
+}
