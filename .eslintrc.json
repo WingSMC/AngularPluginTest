@@ -1,0 +1,104 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2018
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+    ],
+    "rules": {
+        "array-bracket-spacing": [2, "never"],
+        "comma-dangle": [2, "always-multiline"],
+        "constructor-super": 2,
+        "curly": [2, "multi-line"],
+        "max-len": [1, 120],
+        "no-console": [2, { "allow": ["info", "trace", "warn", "error"] }],
+        "no-debugger": 2,
+        "no-dupe-args": 2,
+        "no-dupe-class-members": 2,
+        "no-duplicate-imports": 2,
+        "no-empty": 2,
+        "no-eval": 2,
+        "no-fallthrough": 1,
+        "no-shadow-restricted-names": 2,
+        "no-this-before-super": 2,
+        "no-throw-literal": 2,
+        "no-trailing-spaces": 2,
+        "no-unexpected-multiline": 2,
+        "no-unused-expressions": 1,
+        "no-var": 2,
+        "prefer-const": 2,
+        "quotes": [1, "single"],
+        "radix": 1,
+        "semi-spacing": [2, { "before": false, "after": true }],
+        "semi": [1, "always"],
+        "space-in-parens": [2, "never"],
+        "space-infix-ops": 2,
+        "space-unary-ops": [2, { "words": true, "nonwords": false }],
+        "use-isnan": 2,
+        "valid-typeof": 2,
+        "sort-imports": [
+            2,
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": true,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                "allowSeparatedGroups": false
+            }
+        ],
+        "@angular-eslint/component-class-suffix": [
+            2,
+            { "suffixes": ["Component", "Page", "Dialog"] }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            2,
+            {
+                "vars": "all",
+                "args": "after-used",
+                "ignoreRestSiblings": false,
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-shadow": [
+            2,
+            {
+                "hoist": "all",
+                "allow": ["resolve", "reject", "done", "next", "err", "error"]
+            }
+        ]
+        //"indent": [2, 4],
+        //"arrow-return-shorthand": 1,
+        //"callable-types": 1,
+        //"eofline": 1,
+        //"forin": 1,
+        //"import-blacklist": [1],
+        //"import-spacing": 1,
+        //"interface-over-type-literal": 1,
+        //"label-position": 1,
+        //"member-access": 1,
+        //"member-ordering": [
+        //    1,
+        //    {
+        //        "order": ["static-field", "instance-field", "static-method", "instance-method"]
+        //    }
+        //],
+        //"no-eq-null": 2,
+        //"no-non-null-assertion": 1,
+        //"object-literal-sort-keys": 1,
+        //"one-line": [1, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
+        //"triple-equals": [1, "allow-null-check"],
+    },
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "parser": "@angular-eslint/template-parser",
+            "plugins": ["@angular-eslint/template"]
+        }
+    ],
+    "ignorePatterns": ["src/app/predorapi/**/*", "**/node_modules/**/*"]
+}
